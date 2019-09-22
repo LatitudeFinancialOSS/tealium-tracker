@@ -27,9 +27,10 @@
   },
   "keywords": [
     "tealium",
-    "event",
     "tracker",
-    "analytics"
+    "event",
+    "analytics",
+    "utag"
   ],
   "homepage": "https://github.com/moroshko/tealium-tracker",
   "repository": {
