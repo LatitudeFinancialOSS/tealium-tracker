@@ -1,11 +1,6 @@
 import { callUtag, flushUtagQueue } from "./utagCaller";
 
-function createTealiumTracker({
-  getDataLayer,
-  getQueryString,
-  schema,
-  debugMode = false
-}) {
+function initTealiumTracker({ schema, debugMode = false }) {
   document.addEventListener("utag-loaded", () => {
     if (debugMode) {
       console.log("utag loaded");
@@ -38,17 +33,13 @@ function createTealiumTracker({
     return false;
   }
 
-  function trackPageLoad(data) {
-    const dataLayer = getDataLayer(data);
-
+  function trackPageLoad(dataLayer) {
     if (validateDataLayer(dataLayer, `didn't call utag.view`)) {
       callUtag("view", dataLayer, { validateDataLayer, debugMode });
     }
   }
 
-  function trackEvent(data) {
-    const dataLayer = getDataLayer(data);
-
+  function trackEvent(dataLayer) {
     if (validateDataLayer(dataLayer, `didn't call utag.link`)) {
       callUtag("link", dataLayer, { validateDataLayer, debugMode });
     }
@@ -56,9 +47,8 @@ function createTealiumTracker({
 
   return {
     trackPageLoad,
-    trackEvent,
-    getQueryString
+    trackEvent
   };
 }
 
-export default createTealiumTracker;
+export default initTealiumTracker;
