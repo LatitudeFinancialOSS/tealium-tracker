@@ -1,14 +1,15 @@
 {
   "name": "tealium-tracker",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Easily connect Tealium to your application.",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "src/index.js",
   "scripts": {
     "prettier": "prettier --write \"**/*.{js,json,md}\"",
     "lint": "eslint --max-warnings 0 \"**/*.js\"",
     "test": "echo \"Coming soon!\"",
     "transpile": "rimraf dist && babel src -d dist --ignore \"src/**/*.test.js\"",
-    "prepublish": "npm run transpile"
+    "prepublish": "npm run transpile && webpack"
   },
   "husky": {
     "hooks": {
@@ -23,7 +24,9 @@
     "eslint": "^6.4.0",
     "husky": "^3.0.5",
     "prettier": "^1.18.2",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   },
   "keywords": [
     "tealium",
@@ -41,7 +44,8 @@
     "url": "https://github.com/moroshko/tealium-tracker/issues"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "author": "Misha Moroshko <michael.moroshko@gmail.com>",
   "license": "MIT"

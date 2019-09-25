@@ -1,6 +1,6 @@
 import { callUtag, flushUtagQueue } from "./utagCaller";
 
-function initTealiumTracker({ schema, debugMode = false }) {
+function initTealiumTracker({ schema, debugMode = false } = {}) {
   document.addEventListener("utag-loaded", () => {
     if (debugMode) {
       console.log("utag loaded");
