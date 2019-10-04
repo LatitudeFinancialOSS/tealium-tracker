@@ -1,6 +1,6 @@
 {
   "name": "tealium-tracker",
-  "version": "2.1.1",
+  "version": "2.2.1",
   "description": "Easily connect Tealium to your application.",
   "main": "dist/index.js",
   "module": "src/index.js",

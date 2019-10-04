@@ -24,12 +24,12 @@ function initTealiumTracker({ schema, debugMode = false } = {}) {
     }
 
     console.error(
-      `tealium-tracker: ${errorMessage} because data validation failed: ${JSON.stringify(
-        validate.errors,
-        null,
-        2
-      )}`
+      `${errorMessage} with`,
+      JSON.stringify(dataLayer, null, 2),
+      "because data validation failed:",
+      JSON.stringify(validate.errors, null, 2)
     );
+
     return false;
   }
 
