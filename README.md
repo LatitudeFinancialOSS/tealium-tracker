@@ -10,7 +10,7 @@ npm install --save tealium-tracker
 
 First, you'll need to inject the [utag script](https://docs.tealium.com/platforms/javascript/install/#universal-tag-utag-js) onto the page.
 
-If using Gatsby, see [gatsby-plugin-tealium-utag](https://github.com/moroshko/gatsby-plugin-tealium-utag).
+If using Gatsby, see [gatsby-plugin-tealium-utag](https://github.com/LatitudeFinancialOSS/gatsby-plugin-tealium-utag).
 
 Once `utag` is globally available, initialize the Tealium tracker.
 
@@ -50,7 +50,7 @@ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a)
 </script>
 ```
 
-If using Gatsby, [gatsby-plugin-tealium-utag](https://github.com/moroshko/gatsby-plugin-tealium-utag) takes care of emitting this event.
+If using Gatsby, [gatsby-plugin-tealium-utag](https://github.com/LatitudeFinancialOSS/gatsby-plugin-tealium-utag) takes care of emitting this event.
 
 ## Validation
 
@@ -93,5 +93,5 @@ const { trackPageLoad, trackEvent } = initTealiumTracker({ debugMode: true });
 
 ## Related
 
-- [gatsby-plugin-tealium-utag](https://github.com/moroshko/gatsby-plugin-tealium-utag) - Easily insert Tealium's utag onto a Gatsby page.
-- [react-event-tracker](https://github.com/moroshko/react-event-tracker) - Easily track events in your React application.
+- [gatsby-plugin-tealium-utag](https://github.com/LatitudeFinancialOSS/gatsby-plugin-tealium-utag) - Easily insert Tealium's utag onto a Gatsby page.
+- [react-event-tracker](https://github.com/LatitudeFinancialOSS/react-event-tracker) - Easily track events in your React application.
